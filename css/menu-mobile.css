@@ -1,0 +1,55 @@
+[data-menu="button"]{
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .js [data-menu='button'] {
+        display: flex;
+        background: rgb(206, 148, 60);
+        border: none;
+        padding: .5rem 1rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-family: 'IDM Plex Mono', monospace;
+        font-weight: bold;
+        color: #141111;
+        cursor: pointer;
+        margin: 10px;
+        align-items: center;
+        position: relative;
+        z-index: 300;
+    }
+
+    .js [data-menu='button']::before{
+        margin-right: 4px;
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 12px;
+        background: #141111;
+        box-shadow: 0 4px #141111, 0 -4px #141111;
+        transition: transform .3s;
+    }
+
+    .js #menu {
+        display: none;
+        position: absolute;
+        background: #fb5;
+        max-width: 168px;
+        z-index: 200;
+        top: 15px;
+        padding: 20px 40px 20px 0;
+        margin-top: 32px;
+    }
+
+    .js [data-menu='button'].active::before {
+        box-shadow: 0 4px #141111;
+        transform: rotate(90deg);
+    }
+
+    .js #menu.active {
+        display: block;
+        animation: show-right .3s forwards;
+    }
+}
