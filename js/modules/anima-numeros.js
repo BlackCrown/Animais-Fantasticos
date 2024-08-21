@@ -30,7 +30,6 @@ export default class AnimaNumeros {
 
   // Verifica se o objeto qeu sofreu mutacao tem a classe especificada
   handleMutation(mutation) {
-    console.log(mutation[0]);
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
       this.animaNumeros();
