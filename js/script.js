@@ -34,4 +34,4 @@ initFuncionamento();
 initMenuMobile();
 initDropdownMenu();
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
-FetchBitcoin('https://blockchain.info/ticker','.btc-preco');
+FetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
