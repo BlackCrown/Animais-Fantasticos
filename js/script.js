@@ -32,7 +32,9 @@ animaScroll.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
+const menuMobile = new MenuMobile();
+menuMobile.init();
+
 initFuncionamento();
-initMenuMobile();
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 FetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
